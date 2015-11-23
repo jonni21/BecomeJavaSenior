@@ -31,12 +31,15 @@ public class FileManager {
             inputStream = new BufferedReader(new FileReader(copyFrom));
             outputStream = new PrintWriter(new FileWriter(copyTo));
 
-            int i;
-            while((i = inputStream.read()) != -1) {
-                outputStream.write(i);
+            String s;
+            while((s = inputStream.readLine()) != null) {
+                outputStream.write(s + "\r\n");
             }
-
-        } finally {
+        }
+        catch (IOException ex) {
+            System.err.println(ex.getMessage());
+        }
+        finally {
             if (inputStream != null) inputStream.close();
             if (outputStream != null) outputStream.close();
         }

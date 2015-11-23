@@ -45,6 +45,12 @@ public class Computer {
         this.hddCapacityInGb = hddCapacityInGb;
         this.videocardModel = videocardModel;
         this.videocardRamQuantityInGb = videocardRamQuantityInGb;
+
+        isTurnedOn = false;
+        isOSInstalled = false;
+        isBooted = false;
+        programsInstalled = new ArrayList<>();
+
     }
 
     public void setCpuModel(String cpuModel) {
@@ -180,6 +186,7 @@ public class Computer {
     public void OSUninstall() {
         isOSInstalled = false;
         isBooted = false;
+        programsInstalled.clear();
         System.out.println("Operating System was successfully uninstalled.");
     }
 
