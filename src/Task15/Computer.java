@@ -199,11 +199,11 @@ public class Computer {
     @Override
     public String toString() {
 
-        return "Процессор: " + cpuModel + " " + cpuClockSpeedInGhz + "GHz\n" +
-                "Оперативная память: " + ramType + " " + ramQuantityInGb + "GB\n" +
-                "Материнская плата: " + motherboardManufacturer + " " + motherboardModel + "\n" +
-                "Жесткий диск: " + hddType + " " + hddManufacturer + " " + hddCapacityInGb + "GB\n" +
-                "Видеокарта: " + videocardModel + " " + videocardRamQuantityInGb + "GB";
+        return "РџСЂРѕС†РµСЃСЃРѕСЂ: " + cpuModel + " " + cpuClockSpeedInGhz + "GHz\n" +
+                "РћРїРµСЂР°С‚РёРІРЅР°СЏ РїР°РјСЏС‚СЊ: " + ramType + " " + ramQuantityInGb + "GB\n" +
+                "РњР°С‚РµСЂРёРЅСЃРєР°СЏ РїР»Р°С‚Р°: " + motherboardManufacturer + " " + motherboardModel + "\n" +
+                "Р–РµСЃС‚РєРёР№ РґРёСЃРє: " + hddType + " " + hddManufacturer + " " + hddCapacityInGb + "GB\n" +
+                "Р’РёРґРµРѕРєР°СЂС‚Р°: " + videocardModel + " " + videocardRamQuantityInGb + "GB";
 
     }
 
