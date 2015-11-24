@@ -141,12 +141,17 @@ public class Computer {
         return videocardRamQuantityInGb;
     }
 
+    public boolean getIsBooted() {
+        return isBooted;
+    }
+
     public void programInstall(String progName) {
         if (isBooted) {
             if (programsInstalled.contains(progName)) {
                 System.out.println("This program is already installed!");
             } else {
                 programsInstalled.add(progName);
+                System.out.println("Program " + progName + " has been already installed" );
             }
         }
     }
@@ -164,23 +169,37 @@ public class Computer {
     public void listProgramsInstalled() {
         if (isBooted) {
             System.out.println(programsInstalled);
+        } else {
+            System.out.println("OS isnt't loaded! Can't list the programs installed!");
         }
     }
 
     public void turnOn() {
-        isTurnedOn = true;
-        System.out.println("The computer is turned on.");
+        if (isTurnedOn) {
+            System.out.println("The computer has been already turned on.");
+        } else {
+            isTurnedOn = true;
+            System.out.println("The computer is turned on.");
+        }
     }
 
     public void turnOff() {
-        isBooted = false;
-        isTurnedOn = false;
-        System.out.println("The computer is turned off.");
+        if (isTurnedOn) {
+            isBooted = false;
+            isTurnedOn = false;
+            System.out.println("The computer is turned off.");
+        } else {
+            System.out.println("The computer has been already turned off.");
+        }
     }
 
     public void OSInstall() {
-        isOSInstalled = true;
-        System.out.println("Operating System was successfully installed.");
+        if (isTurnedOn) {
+            isOSInstalled = true;
+            System.out.println("Operating System was successfully installed.");
+        } else {
+            System.out.println("Computer is turned off! Can't install OS!");
+        }
     }
 
     public void OSUninstall() {

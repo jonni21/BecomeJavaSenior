@@ -36,9 +36,9 @@ public class FileManager {
                 outputStream.write(s + "\r\n");
             }
         }
-        catch (IOException ex) {
-            System.err.println(ex.getMessage());
-        }
+//        catch (IOException ex) {
+//            System.err.println(ex.getMessage());
+//        }
         finally {
             if (inputStream != null) inputStream.close();
             if (outputStream != null) outputStream.close();
