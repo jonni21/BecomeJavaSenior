@@ -51,7 +51,7 @@ public class Consultant {
     }
 
     private String getName(String s) {
-        while ((!s.matches("(\\D){3,15}"))) {
+        while ((!s.matches("[a-zA-Z]{3,15}"))) {
             System.out.println("Enter correct value (3 to 15 letters):");
             s = input.next();
         }
