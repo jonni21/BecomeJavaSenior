@@ -6,5 +6,4 @@ public class Main {
         Consultant consultant = new Consultant();
         consultant.start();
     }
-
 }

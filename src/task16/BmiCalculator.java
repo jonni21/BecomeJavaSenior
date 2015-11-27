@@ -7,11 +7,16 @@ public class BmiCalculator {
     }
 
     public String getBmiCategory(double bmiIndex) {
-        if (bmiIndex < 18.5) {
+
+        final double UNDERWEIGHT_BORDER_VALUE = 18.5;
+        final double NORMAL_BORDER_VALUE = 25.0;
+        final double OVERWEIGHT_BORDER_VALUE = 30.0;
+
+        if (bmiIndex < UNDERWEIGHT_BORDER_VALUE) {
             return "Underweight";
-        } else if ((bmiIndex >= 18.5) && (bmiIndex < 25.0)) {
+        } else if ((bmiIndex >= UNDERWEIGHT_BORDER_VALUE) && (bmiIndex < NORMAL_BORDER_VALUE)) {
             return "Normal";
-        } else if ((bmiIndex >= 25.0) && (bmiIndex < 30.0)) {
+        } else if ((bmiIndex >= NORMAL_BORDER_VALUE) && (bmiIndex < OVERWEIGHT_BORDER_VALUE)) {
             return "Overweight";
         } else {
             return "Obesity";

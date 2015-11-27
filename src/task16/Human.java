@@ -82,7 +82,7 @@ public class Human {
         s = input.next();
         while (true) {
             while (!(s.matches("\\d+"))) {
-                System.out.println("Enter correct value from 10 to 100:");
+                System.out.println("Enter correct value from "+MIN_AGE+" to "+MAX_AGE+":");
                 s = input.next();
             }
             int age = Integer.valueOf(s);
@@ -90,7 +90,7 @@ public class Human {
                 this.age = age;
                 break;
             } else {
-                System.out.println("Enter correct value from 10 to 100:");
+                System.out.println("Enter correct value from "+MIN_AGE+" to "+MAX_AGE+":");
                 s = input.next();
             }
         }
@@ -99,7 +99,7 @@ public class Human {
         s = input.next();
         while (true) {
             while (!(s.matches("\\d+[\\.,]?\\d+"))) {
-                System.out.println("Enter correct value from 50 to 250:");
+                System.out.println("Enter correct value from "+MIN_HEIGHT+" to "+MAX_HEIGHT+":");
                 s = input.next();
             }
             s = s.replace(",", ".");
@@ -108,7 +108,7 @@ public class Human {
                 this.height = height;
                 break;
             } else {
-                System.out.println("Enter correct value from 50 to 250:");
+                System.out.println("Enter correct value from "+MIN_HEIGHT+" to "+MAX_HEIGHT+":");
                 s = input.next();
             }
         }
@@ -117,7 +117,7 @@ public class Human {
         s = input.next();
         while (true) {
             while (!(s.matches("\\d+[\\.,]?\\d+"))) {
-                System.out.println("Enter correct value from 30.0 to 300.0:");
+                System.out.println("Enter correct value from "+MIN_WEIGHT+" to "+MAX_WEIGHT+":");
                 s = input.next();
             }
             s = s.replace(",", ".");
@@ -126,7 +126,7 @@ public class Human {
                 this.weight = weight;
                 break;
             } else {
-                System.out.println("Enter correct value from 30.0 to 300.0:");
+                System.out.println("Enter correct value from "+MIN_WEIGHT+" to "+MAX_WEIGHT+":");
                 s = input.next();
             }
         }
