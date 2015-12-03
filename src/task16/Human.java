@@ -1,7 +1,5 @@
 package task16;
 
-import java.util.Scanner;
-
 public class Human {
 
     final int MIN_AGE = 10;
